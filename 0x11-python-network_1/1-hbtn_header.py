@@ -5,7 +5,7 @@ X-Request-Id variable found in the header of the response
 """
 if __name__ == "__main__":
     import urllib.request
-    import sys
+    from sys import argv
     req = request.Request(sys.argv[1])
     with urllib.request.urlopen(req) as response:
         print(response.headers.get('X-Request-Id'))
